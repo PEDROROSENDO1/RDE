@@ -1,21 +1,23 @@
-[package]
-name = "rocketde"
+[workspace]
+resolver = "3"
+members = [
+    "crates/rocketde-core",
+    "crates/rocketde-ui-common",
+    "apps/rocketde",
+    "apps/rocketde-settings",
+    "apps/rocketde-files",
+    "apps/rocketde-editor",
+    "apps/rocketde-tasks",
+]
+
+[workspace.package]
 version = "0.1.0"
 edition = "2024"
 
-[[bin]]
-name = "rocketde"
-path = "src/main.rs"
+[workspace.dependencies]
+rocketde-core = { path = "crates/rocketde-core" }
+rocketde-ui-common = { path = "crates/rocketde-ui-common" }
 
-[[bin]]
-name = "rocketde-settings"
-path = "src/bin/rocketde_settings.rs"
-
-[[bin]]
-name = "rocketde-files"
-path = "src/bin/rocketde_files.rs"
-
-[dependencies]
 bytemuck = { version = "1.25.2", features = ["derive"] }
 calloop = "0.14.5"
 calloop-wayland-source = "0.4.1"
@@ -32,6 +34,7 @@ notify = "8.2.2"
 pollster = "1.0.1"
 raw-window-handle = "0.6.2"
 resvg = "0.50.0"
+ron = "0.8"
 serde = { version = "1.0.229", features = ["derive"] }
 serde_json = "1.0.154"
 smithay-client-toolkit = { version = "0.21.1", features = ["system"] }
@@ -70,4 +73,3 @@ opt-level = 1
 
 [profile.dev.package."*"]
 opt-level = 3
-

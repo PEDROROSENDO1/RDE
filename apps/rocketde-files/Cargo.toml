@@ -1,0 +1,28 @@
+[package]
+name = "rocketde-files"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "rocketde-files"
+path = "src/main.rs"
+
+[dependencies]
+rocketde-core.workspace = true
+rocketde-ui-common.workspace = true
+
+chrono.workspace = true
+crossbeam-channel.workspace = true
+dirs.workspace = true
+egui.workspace = true
+egui-wgpu.workspace = true
+image.workspace = true
+libc.workspace = true
+notify.workspace = true
+pollster.workspace = true
+raw-window-handle.workspace = true
+serde_json.workspace = true
+smithay-client-toolkit.workspace = true
+toml.workspace = true
+wayland-client.workspace = true
+wgpu.workspace = true

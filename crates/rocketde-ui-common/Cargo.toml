@@ -1,0 +1,8 @@
+[package]
+name = "rocketde-ui-common"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+egui.workspace = true
+rocketde-core.workspace = true
